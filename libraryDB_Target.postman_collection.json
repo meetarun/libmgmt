@@ -1,0 +1,441 @@
+{
+	"info": {
+		"_postman_id": "997d1a03-165d-4034-8626-2a1307337313",
+		"name": "Target",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getBookByBookId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEiLCJqdGkiOiI4NGFhMTQyNi03NmI2LTQ0YjItYjIxNS03YmY5NDA1ZWU4MGUiLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9TVVBFUlZJU09SIiwiZXhwIjoxNTc0NjkyNjUxLCJpYXQiOjE1NzQ2ODkwNTF9.IEyZfpAo3cl1pbYROduX-CsWjENREe7Gbdq1Gxm1IRFjEL7gRd3oGiHkRIHBbaYIZdBFCtpcxvPJdic6gCUl4w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/book/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"book",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllBooks_NormalMethod",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE1NzQwODIwMzcsImlhdCI6MTU3NDA3ODQzN30.7JDRvEi1EOEA18Ec2nO3Rmyf8Pa1KRqvkq4vwMSFUUCKKSJU_mDWbcZ6julKZXF3TdGmt5Lfvo6c-UTtTqE41A",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/125333",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"125333"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveOrAddBook",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEiLCJqdGkiOiJlMDQzOWZkMi1hNzU1LTRjOTctYjgwYS01ZDczZWJlYjQzNTciLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9TVVBFUlZJU09SIiwiZXhwIjoxNTc0NjY1NzQyLCJpYXQiOjE1NzQ2NjIxNDJ9.Jt0yl7-lQzH_VyR9rUepMQ4py3ECadHNVBoTOYlcxUJQP-VwIeqYB_M9nFLxVhQHvv9QmukND-g96sBiVpO7fA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"bookName\": \"Python Techniques\",\r\n        \"bookDesc\": \"Introduction to Python Script\",\r\n        \"bookIsbn\": \"ISBN-1110-04\",\r\n        \"bookAuthor\": \"Kurose\",\r\n        \"bookPublication\": \"McGraw Hill Publications\",\r\n        \"bookCategory\": \"COMPUTER SCIENCE\",\r\n        \"bookMediaType\": \"BOOK\",\r\n        \"bookPrice\": \"750\",\r\n        \"bookEdition\": \"1\",\r\n        \"bookInductionDate\": \"\",\r\n        \"bookAvailability\": \"1\"\r\n\t\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/book",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"book"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchAPIRegular",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/book/search?name=THINKING IN JAVA",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"book",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "THINKING IN JAVA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\" : \"student1\",\n\t\"password\" : \"student$1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUserByUserID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdHVkZW50MSIsImV4cCI6MTU3NDAxODU5NywiaWF0IjoxNTc0MDE0OTk3fQ.JmSYeR4De0PVbulDSLWzCYdfAm5BlEYesL-gb1z2kiOLHAqcBjpWF_2h-wyU2o2kbyqeLsgMsccmSkLvtztPKg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/1133",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"1133"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getIssuedBooksofstudentBystudentId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdHVkZW50MSIsImV4cCI6MTU3NDA3NjE4OSwiaWF0IjoxNTc0MDcyNTg5fQ.merwZaZmrnBIaA8eZjLcPp-5f-j68qquUOJPHEjzBelP7Kvp80CzCU6izM8Npg1eAjRSpcRWzUOemlO3es4CLA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/borrower/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"borrower",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchBookwithPageandSorting",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE1NzQwOTY0ODQsImlhdCI6MTU3NDA5Mjg4NH0.P665q3M9pIGayamS3h8u-TRLKXGl6XrMDmA6Qhexfh6Zb1L8UhFkyYgOui6f6OXSDiapb3nFIHX_V0gJt7afsQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/book/searchwithpage?name=java&pageno=0&pagesize=4&sortby=bookId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"book",
+						"searchwithpage"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "java"
+						},
+						{
+							"key": "pageno",
+							"value": "0"
+						},
+						{
+							"key": "pagesize",
+							"value": "4"
+						},
+						{
+							"key": "sortby",
+							"value": "bookId"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookSearchwithNewPageable",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ0ZXN0YWRtaW4xIiwiZXhwIjoxNTc0MzIxOTU2LCJpYXQiOjE1NzQzMTgzNTZ9.t5AZrchjCNcySPMduCYUDxXaIGVNPeGy5MqyVeTM1P5WHV2FW16ZcAAgiFrCTcC2BmXuo5bSjnWchyu_VMFolQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/book/searchwithpage?name=java&page=0&size=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"book",
+						"searchwithpage"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "java"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AdmingetAllIssuedBooks",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEiLCJleHAiOjE1NzQzMzkxNjMsImlhdCI6MTU3NDMzNTU2M30.eBaqcDeF00ImPngUp6JvGfXmblqPau2E2Q6tVzJo6qinl9QtIbzvg8xqE98D1oq81Kagkuc9uSjyCYEny2fFiQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/borrower",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"borrower"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBorrowerByUserID",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEiLCJqdGkiOiJkYjQyNWQ1OS1kYjY4LTRlZDYtOGQ4Yi00YjAyYTA5MjU1NTEiLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9TVVBFUlZJU09SIiwiZXhwIjoxNTc0NTAxODA1LCJpYXQiOjE1NzQ0OTgyMDV9.AkQic64FBlXnrptJGin2mscKJMWA1TJMZUIlVMzygLgmchrh1aT5hQ4nU25BwzXCp--Seswo7HqhdZJY7V88jA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/borrower/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"borrower",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBorrowerByUserName",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEiLCJqdGkiOiJkYjQyNWQ1OS1kYjY4LTRlZDYtOGQ4Yi00YjAyYTA5MjU1NTEiLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9TVVBFUlZJU09SIiwiZXhwIjoxNTc0NTAxODA1LCJpYXQiOjE1NzQ0OTgyMDV9.AkQic64FBlXnrptJGin2mscKJMWA1TJMZUIlVMzygLgmchrh1aT5hQ4nU25BwzXCp--Seswo7HqhdZJY7V88jA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/borrower/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"borrower",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getBookByBookId",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbjEiLCJqdGkiOiI4NGFhMTQyNi03NmI2LTQ0YjItYjIxNS03YmY5NDA1ZWU4MGUiLCJyb2xlcyI6IlJPTEVfQURNSU4sUk9MRV9TVVBFUlZJU09SIiwiZXhwIjoxNTc0NjkyNjUxLCJpYXQiOjE1NzQ2ODkwNTF9.IEyZfpAo3cl1pbYROduX-CsWjENREe7Gbdq1Gxm1IRFjEL7gRd3oGiHkRIHBbaYIZdBFCtpcxvPJdic6gCUl4w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/book/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"book",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:postgresql://localhost:5432/librarydb</property>
+        <property name="connection.driver_class">org.postgresql.Driver</property>
+        <property name="hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <mapping class="com.apus.arunlib.entity.BookEntity"/>
+        <mapping class="com.apus.arunlib.entity.RoleEntity"/>
+        <mapping class="com.apus.arunlib.entity.UserEntity"/>
+        <mapping class="com.apus.arunlib.entity.UserRoleEntity"/>
+        <mapping class="com.apus.arunlib.entity.LibInventoryEntity"/>
+        <mapping class="com.apus.arunlib.entity.LibUserEntity"/>
+        <mapping class="com.apus.arunlib.entity.LibBorrowerEntity"/>
+    </session-factory>
+</hibernate-configuration>
