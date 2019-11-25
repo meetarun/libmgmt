@@ -7,31 +7,42 @@ The Application Library Management System is created using
 		Log4j
 		Postgresql 12.0
 
+
 I have used 
+<B>
 		Jasypt Encoder    (v1.9.3)
-		Bcrypt Password Encoder
- to encrypt all the passwords used in DB and application properties.
+		Bcrypt Password Encoder 
+</B>
+to encrypt all the passwords used in DB and application properties.
 I have further used 
-		JWT Token for API Authentication
-		Role Based Authentication 
-		Added CORS Support
-		and Method Level Security
+<B><h4>
+		JWT Token for API Authentication<br>
+		Role Based Authentication <br>
+		Added CORS Support<br>
+		and Method Level Security<br>
+	</h4></B>
+		
 and created Junit SpringBootTest cases.
 
 I have created a Pageable Search in spring and created fuzzy search UI with custom footbar for search result navigation.
 
+
 Admin Can 
-•	Search Books
-•	Add Book
-•	View all the issued books
+
+	Search Books
+	Add Book
+	View all the issued books
+	
 Student Can
-•	Search Books
-•	View his issued books
+
+	Search Books
+	View his issued books
+
 
 Following roles were created for Library Management,
-ROLE_ADMIN,
-ROLE_SUPERVISOR
-ROLE_STUDENT
+	ROLE_ADMIN,
+	ROLE_SUPERVISOR
+	ROLE_STUDENT
 
 
 
@@ -57,7 +68,7 @@ npm start
 6.	Now access the UI with the URL http://localhost:3000/
 
 
-I have also provided the Postman Collection of the Library APIs  in the file  libraryDB_Target.postman_collection.json, The application can be accessed via this endpoints using valid jwtToken in Authorization Header.
+I have also provided the <B> Postman Collection of the Library APIs </B> in the file  libraryDB_Target.postman_collection.json, The application can be accessed via this endpoints using valid jwtToken in Authorization Header.
 
 The user passwords can be encrypted using   PwdEncrypterUtil  class which has main method.
 
