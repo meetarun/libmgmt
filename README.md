@@ -1,4 +1,5 @@
 The Application Library Management System is created using
+
 		SpringBoot v2.2.1 
 		Spring Security v5.2.1
 		Hibernate
@@ -38,7 +39,7 @@ How to Install and Use the Application,
 
 1.	Run the SQL Scripts in the librarydb_sql.sql file  , this will create the  db named  ‘librarydb’ and a user named ‘librarydbuser’  with password ‘libarydbuser1’  and required tables with seed data for the application.
 
-2.	Download the Library Springboot Application code from git link
+2.	Download the Library Springboot Application code from git link https://github.com/meetarun/libmgmt
 
 Import the same in your preferred IDE or compile the code directly using maven command
  mvn install  or mvn clean install
@@ -46,7 +47,7 @@ this will create the jar  in target folder and  .m2\repository\com\apus\arunlib\
 
 3.	Now start the jar using  java -jar <jar path>
 
-4.	Download the UI code from the link,
+4.	Download the UI code from the link, https://github.com/meetarun/libmgmt
 
 5.	Start the UI using the npm commands
 
